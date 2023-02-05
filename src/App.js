@@ -16,16 +16,16 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
+      <BrowserRouter basename={window.location.pathname || ''}>
         <Routes>
-          <Route path='/' element={<LandingPagecomp apiKey={apiKey} category='general'/>}></Route>
-          <Route path='/general' element={<LandingPagecomp apiKey={apiKey} category='general'/>}></Route>
-          <Route path='/sports' element={<LandingPagecomp apiKey={apiKey} category='sports'/>}></Route>
-          <Route path="/business" element={<LandingPagecomp apiKey={apiKey} category="business" />}></Route>
-          <Route path="/entertainment" element={<LandingPagecomp apiKey={apiKey} category="entertainment" />}></Route>
-          <Route path="/health" element={<LandingPagecomp apiKey={apiKey} category="health" />}></Route>
-          <Route path="/science" element={<LandingPagecomp apiKey={apiKey} category="science" />}></Route>
-          <Route path="/technology" element={<LandingPagecomp apiKey={apiKey} category="technology" />}></Route>
+          <Route exact path='/' element={<LandingPagecomp apiKey={apiKey} category='general'/>}></Route>
+          <Route exact path='/general' element={<LandingPagecomp apiKey={apiKey} category='general'/>}></Route>
+          <Route exact path='/sports' element={<LandingPagecomp apiKey={apiKey} category='sports'/>}></Route>
+          <Route exact path="/business" element={<LandingPagecomp apiKey={apiKey} category="business" />}></Route>
+          <Route exact path="/entertainment" element={<LandingPagecomp apiKey={apiKey} category="entertainment" />}></Route>
+          <Route exact path="/health" element={<LandingPagecomp apiKey={apiKey} category="health" />}></Route>
+          <Route exact path="/science" element={<LandingPagecomp apiKey={apiKey} category="science" />}></Route>
+          <Route exact path="/technology" element={<LandingPagecomp apiKey={apiKey} category="technology" />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
