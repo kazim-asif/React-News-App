@@ -21,6 +21,24 @@ export default function LandingPagecomp(props){
         //console.log(news)
     }
 
+const url = 'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=taylor%20swift&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null';
+
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': 'df5207d406msh18612d9fcb9c1bfp164c2ejsn0c841129c196',
+    'X-RapidAPI-Host': 'contextualwebsearch-websearch-v1.p.rapidapi.com'
+  }
+};
+
+fetch(url, options)
+	.then(res => res.json())
+	.then(json => console.log(json))
+	.catch(err => console.error('error:' + err));
+
+
+
+
     const capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     } 
