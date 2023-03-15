@@ -2,7 +2,6 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Fade } from "react-reveal";
 import './style.css'
 
 function Cardcomp(props) {
