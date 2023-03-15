@@ -9,7 +9,8 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter basename={window.location.pathname || ''}>
+      {/* <BrowserRouter basename={window.location.pathname || ''}> */}
+      <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<LandingPagecomp category='general'/>}></Route>
           <Route exact path='/general' element={<LandingPagecomp category='general'/>}></Route>

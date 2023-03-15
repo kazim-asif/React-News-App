@@ -10,9 +10,10 @@ function Cardcomp(props) {
 
   return (
     <div className="newscard">
-      <Fade bottom>
         <Card>
+        <div className="CardImage">
           <Card.Img variant="top" src={imageUrl} />
+          </div>
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>
@@ -26,7 +27,6 @@ function Cardcomp(props) {
             </div>
           </Card.Body>
         </Card>
-      </Fade>
     </div>
   );
 }
