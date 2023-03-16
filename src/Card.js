@@ -12,7 +12,7 @@ function Cardcomp(props) {
         <Card>
         <div className="CardImage">
           <Card.Img variant="top" src={imageUrl} />
-          </div>
+        </div>
           <Card.Body>
             {/* <Card.Title>{title}</Card.Title> */}
             <Card.Text>{description}</Card.Text>
