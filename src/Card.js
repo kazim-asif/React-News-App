@@ -14,8 +14,8 @@ function Cardcomp(props) {
           <Card.Img variant="top" src={imageUrl} />
           </div>
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>{description}</Card.Text>
+            {/* <Card.Title>{title}</Card.Title>
+            <Card.Text>{description}</Card.Text> */}
             <div className="CardButton">
               <Card.Footer className="CardFooter">
                 ON {new Date(date).toGMTString()}
