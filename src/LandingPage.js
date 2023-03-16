@@ -29,11 +29,16 @@ export default function LandingPagecomp(props) {
             }
         };
         
-        fetch(url, options)
+        await fetch(url, options)
         .then(res => res.json())
         .then(json => {
             let tmparray=json.value
             setNews(tmparray)
+            news.forEach(n => {
+                if(n.title.length+n.description.length > 235 ) {
+                    n.description=n.description.substring(0,232-n.title.length)+'...' 
+                }   
+            });
         })
         .catch(err => console.error('error:' + err));
 
@@ -65,6 +70,10 @@ export default function LandingPagecomp(props) {
         fetchResultFromApi()
     }
 
+
+
+
+
     return (
         <>
             <Navbarcomp></Navbarcomp>
@@ -89,11 +98,9 @@ export default function LandingPagecomp(props) {
             </div>
             <div className="container">
                 <Row xs={1} md={4} className="g-4">
-                    {news.length > 0 ?
-                    
+                    {news.length > 0 ?                   
                         news.map((n) => (
                             <Col key={n.url}>
-                                { (n.title.length+n.description.length)>235 ? n.description=n.description.substring(0,232-n.title.length)+'...' :null}
                                 <Cardcomp title={n.title ? n.title : ""} description={n.description ? n.description : ""} imageUrl={n.image.url ? n.image.url : "https://www.shutterstock.com/image-vector/colorful-abstract-banner-template-dummy-260nw-1538384741.jpg"} newsUrl={n.url} date={n.datePublished}/>
                             </Col>
                         ))
