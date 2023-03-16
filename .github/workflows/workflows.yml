@@ -36,6 +36,6 @@ jobs:
           git config --global user.name 'Kazim Asif'
           git config --global user.email 'kazimasif2020@gmail.com'
           git remote set-url origin https://${{ secrets.NEWSAPP_ACCESS_TOKEN }}@github.com/${{ github.repository }}
-          npm run deploy
+          CI=false npm run deploy
 
       
