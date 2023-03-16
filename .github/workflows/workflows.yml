@@ -26,12 +26,10 @@ jobs:
       - name: Install and build
         run: npm ci
       - name: Build
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Test
         run: npm test
-        env:
-         CI: false
 
       - name: Deploy
         run: |
