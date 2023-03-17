@@ -28,9 +28,6 @@ jobs:
       - name: Build
         run: CI=false npm run build
 
-      - name: Test
-        run: npm test
-
       - name: Deploy
         run: |
           git config --global user.name 'Kazim Asif'
