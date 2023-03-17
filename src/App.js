@@ -3,15 +3,15 @@ import React from 'react';
 // import './App.css';
 import './style.css'
 import LandingPagecomp from './LandingPage';
-import {Route} from "react-router-dom";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 
 function App() {
 
   return (
     <div className='App'>
-      
-      {/* <BrowserRouter basename={process.env.PUBLIC_URL + '/'}> */}
-        
+      <BrowserRouter basename={window.location.pathname}>
+      {/* <BrowserRouter> */}
+        <Routes>
           <Route exact path='/' element={<LandingPagecomp category='general'/>}></Route>
           <Route path='/general' element={<LandingPagecomp category='general'/>}></Route>
           <Route path='/sports' element={<LandingPagecomp category='sports'/>}></Route>
@@ -20,7 +20,8 @@ function App() {
           <Route path="/health" element={<LandingPagecomp category="health" />}></Route>
           <Route path="/science" element={<LandingPagecomp category="science" />}></Route>
           <Route path="/technology" element={<LandingPagecomp category="technology" />}></Route>
-        
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
