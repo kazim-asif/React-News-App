@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter basename={window.location.pathname || ''}>
+      <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
       {/* <BrowserRouter> */}
         <Routes>
           <Route exact path='/' element={<LandingPagecomp category='general'/>}></Route>
