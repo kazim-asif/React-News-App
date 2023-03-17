@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState, useEffect } from "react";
 import Cardcomp from "./Card";
-import Navbarcomp from './Navbar'
+// import Navbarcomp from './Navbar'
 import './style.css';
 
 export default function LandingPagecomp(props) {
@@ -76,7 +76,7 @@ export default function LandingPagecomp(props) {
 
     return (
         <>
-            <Navbarcomp></Navbarcomp>
+            {/* <Navbarcomp></Navbarcomp> */}
             <div className="hero-section">
                     <h1 className="hero-title">Get In Touch With The World</h1><br/>
                     <fieldset>
